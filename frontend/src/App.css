@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Black background */
+  color: white; /* White text */
+}
+
+a {
+  text-decoration: none;
+  color: #f8b400; /* Gold for links */
+}
+
+a:hover {
+  color: #ffc107; /* Brighter gold on hover */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #1c1e26; /* Dark content background */
+  color: #f1f1f1; /* Light text */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Popup styles */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High priority */
+}
+
+.popup {
+  background-color: #1c1e26; /* Match content background */
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  color: white; /* White text */
+}
+
+.popup h3 {
+  font-size: 1.5rem; /* Adjust font size */
+  margin-bottom: 20px;
+  color: #f8b400; /* Gold for text */
+}
+
+.popup button {
+  padding: 10px 20px;
+  font-size: 1rem; /* Button text size */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8b400; /* Gold button */
+  color: #1c1e26; /* Dark text on gold */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #ffc107; /* Brighter gold on hover */
+}

@@ -1,0 +1,26 @@
+/* Global Styles */
+body {
+  margin: 0;
+  background-color: #000; /* Black background */
+  color: #f1f1f1; /* Default text color */
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #68a8e8; /* Blue for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #90caf9; /* Lighter blue on hover */
+}
+
+/* Center Alignment for Main Content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

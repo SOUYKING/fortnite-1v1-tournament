@@ -1,0 +1,58 @@
+.admin-dashboard {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #3b4b69;
+    border-radius: 5px;
+    background-color: #2e2e3f;
+    color: #f1f1f1;
+  }
+  
+  button {
+    background-color: #68a8e8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #90caf9;
+  }
+  
+  .tournament-card {
+    background-color: #2e2e3f;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .tournament-card h3 {
+    margin: 0 0 10px 0;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

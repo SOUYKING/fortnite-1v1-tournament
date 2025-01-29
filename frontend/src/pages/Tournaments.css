@@ -1,0 +1,137 @@
+/* Container */
+.tournaments-container {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #f1f1f1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  background-color: #282c34;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.tab-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Tournament List */
+.tournaments-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tournament Card */
+.tournament-card {
+  background-color: #1e1e2f;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.tournament-card:hover {
+  transform: translateY(-5px);
+}
+
+.tournament-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tournament-card h3 {
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  margin: 10px 0;
+}
+
+.tournament-card p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.tournament-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.join-button,
+.leaderboard-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.join-button:hover,
+.leaderboard-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.join-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .tournaments-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tournament-card {
+    max-width: 100%;
+  }
+
+  .tournament-image {
+    height: 150px;
+  }
+}
