@@ -1,29 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CurrentGame.css';
 
-const CurrentGame = () => {
+const CurrentGame = ({ currentMatchId }) => {
   const navigate = useNavigate();
-  const [isInMatch, setIsInMatch] = useState(false);
-
-  useEffect(() => {
-    const currentMatch = JSON.parse(sessionStorage.getItem('currentMatch'));
-    if (currentMatch) {
-      setIsInMatch(true);
-      navigate(`/match/${currentMatch.matchId}`, {
-        state: { self: currentMatch.self, opponent: currentMatch.opponent },
-      });
-    } else {
-      setIsInMatch(false);
-    }
-  }, [navigate]);
 
   return (
-    <div>
-      {!isInMatch && (
+    <div className="current-game">
+      {currentMatchId ? (
+        <>
+          <h2>You are in a game!</h2>
+          <p>Match ID: {currentMatchId}</p>
+          <button onClick={() => navigate(`/match/${currentMatchId}`)}>Go to Match</button>
+        </>
+      ) : (
         <div className="popup-container">
           <div className="popup">
-            <h3>You are currently not participating in any active game</h3>
-            <button onClick={() => navigate('/tournaments')}>Ok</button>
+            <h3>You are not in a game.</h3>
+            <button onClick={() => navigate('/tournaments')}>Go to Tournaments</button>
           </div>
         </div>
       )}

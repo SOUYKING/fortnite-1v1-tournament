@@ -20,6 +20,9 @@ const MatchPage = () => {
 
     const matchId = `${self.id}-${opponent?.id}`;
 
+    // Store match state in session storage
+    sessionStorage.setItem('currentMatch', JSON.stringify({ matchId, self, opponent }));
+
     socket.emit('joinMatch', { matchId });
 
     socket.on('receiveMessage', (msg) => {
@@ -46,6 +49,7 @@ const MatchPage = () => {
   const handleLeaveMatch = () => {
     const matchId = `${self.id}-${opponent?.id}`;
     socket.emit('leaveMatch', { matchId });
+    sessionStorage.removeItem('currentMatch');
     navigate('/tournaments');
   };
 

@@ -6,7 +6,8 @@ const userSchema = new mongoose.Schema({
   epicGamesName: { type: String, default: null },
   wins: { type: Number, default: 0 },
   losses: { type: Number, default: 0 },
-  lastEpicUpdate: { type: Date, default: null }, // Track the last Epic Games name update
+  lastEpicUpdate: { type: Date, default: null },
+  status: { type: String, enum: ['idle', 'inQueue', 'inGame'], default: 'idle' }, // New field
 });
 
 module.exports = mongoose.model('User', userSchema);
